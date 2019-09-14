@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div>
+		<h2>Fтяж</h2>
+		<form>
+			<label for="weight">Enter m in kilograms</label>
+			<br>
+			<input id="weight" type="number">
+			<input id="butt" type="button" name="Calculate">
+		</form>
+		<span id="get"></span>
+	</div>
+	<div>
+		<h2>FАрхімеда</h2>
+		<form>
+			<label for="ro">Enter p in kg/m3</label>
+			<br>
+			<input id="ro" type="number">
+			<br>
+			<label for="volume">Enter m3</label>
+			<br>
+			<input id="volume" type="number">
+			<input id="butt2" type="button" name="">
+		</form>
+		<span id="get2"></span>
+	</div>
+	<div>
+		<h2>vшвидкість</h2>
+		<form>
+			<label for="way">Enter S in m</label>
+			<br>
+			<input id="way" type="number">
+			<br>
+			<label for="time">Enter time in sec</label>
+			<br>
+			<input id="time" type="number">
+			<input id="butt3" type="button" name="">
+		</form>
+		<span id="get3"></span>
+		<span id="get31"></span>
+	</div>
+	<div>
+		<h2>Sшлях</h2>
+		<form>
+			<label for="speed">Enter v in m/sec</label>
+			<br>
+			<input id="speed" type="number">
+			<br>
+			<label for="time2">Enter time in sec</label>
+			<br>
+			<input id="time2" type="number">
+			<input id="butt4" type="button" name="">
+		</form>
+		<span id="get4"></span>
+		<span id="get41"></span>
+	</div>
+	<div>
+		<h2>tчас</h2>
+		<form>
+			<label for="speed2">Enter v in m/sec</label>
+			<br>
+			<input id="speed2" type="number">
+			<br>
+			<label for="way2">Enter way in m</label>
+			<br>
+			<input id="way2" type="number">
+			<input id="butt5" type="button" name="">
+		</form>
+		<span id="get5"></span>
+		<span id="get51"></span>
+	</div>
+	<div>
+		<h2>Fампера</h2>
+		<form>
+			<label for="iduction">Enter B in Tl</label>
+			<br>
+			<input id="iduction" type="number">
+			<br>
+			<label for="tok">Enter curen in A</label>
+			<br>
+			<input id="tok" type="number">
+			<br>
+			<label for="lenght">Enter lenght in m</label>
+			<br>
+			<input id="lenght" type="number">
+			<br>
+			<label for="sinalpa">Enter deg</label>
+			<br>
+			<input id="sinalpa" type="number">
+			<input id="butt6" type="button" name="">
+		</form>
+		<span id="get6"></span>
+	</div>
+
+	<div>
+		<h2>Fлоренца</h2>
+		<form>
+			<label for="iduction2">Enter B in Tl</label>
+			<br>
+			<input id="iduction2" type="number">
+			<br>
+			<label for="qu">Enter q in Kl</label>
+			<br>
+			<input id="qu" type="number">
+			<br>
+			<label for="speedmagn">Enter speed in m/sec</label>
+			<br>
+			<input id="speedmagn" type="number">
+			<br>
+			<label for="sinalpalor">Enter deg</label>
+			<br>
+			<input id="sinalpalor" type="number">
+			<input id="butt7" type="button" name="">
+		</form>
+		<span id="get7"></span>
+		<span id="get72"></span>
+		<span id="get74"></span>
+		<span id="get73"></span>
+	</div>
+		
+
+
+
+	<script type="text/javascript" href="script.js">
+			//Fтяж
+			butt.onclick = function() {
+   			var weight = document.querySelector('#weight').value;
+   			document.getElementById('get').innerHTML= 10*weight+"H";
+			};
+			//...............................................
+			//FАрхімеда
+			butt2.onclick = function() {
+   			var ro = document.querySelector('#ro').value;
+   			var volume = document.querySelector('#volume').value;
+   			document.getElementById('get2').innerHTML= 10*ro*volume+"H";
+			};
+			//................................................
+			//vШвидкість
+			butt3.onclick = function() {
+   			var way = document.querySelector('#way').value;
+   			var time = document.querySelector('#time').value;
+   			document.getElementById('get3').innerHTML= way/time+"m/sec";
+   			document.getElementById('get31').innerHTML= way/time*3.6+"km/hour";
+			};
+			//................................................
+			//Sшлях
+			butt4.onclick = function() {
+   			var speed = document.querySelector('#speed').value;
+   			var time2 = document.querySelector('#time2').value;
+   			document.getElementById('get4').innerHTML= speed*time2+"m";
+   			document.getElementById('get41').innerHTML= speed*time2/1000+"km";
+			};
+			//................................................
+			//tчас
+			butt5.onclick = function() {
+   			var way2 = document.querySelector('#way2').value;
+   			var speed2 = document.querySelector('#speed2').value;
+   			document.getElementById('get5').innerHTML= way2/speed2+"sec";
+   			document.getElementById('get51').innerHTML= way2/speed2/3600+"hour";
+			};
+			//................................................
+			//Fампера
+			butt6.onclick = function() {
+   			var iduction = document.querySelector('#iduction').value;
+   			var tok = document.querySelector('#tok').value;
+   			var lenght = document.querySelector('#lenght').value;
+   			var sinalpa1 = Math.sin(document.querySelector('#sinalpa').value * Math.PI / 180);
+   			document.getElementById('get6').innerHTML= iduction*tok*lenght*sinalpa1+"H";
+			};
+			//................................................
+			//Fлоренца
+			butt7.onclick = function() {
+   			var iduction2 = document.querySelector('#iduction2').value;
+   			var qu = document.querySelector('#qu').value;
+   			var speedmagn = document.querySelector('#speedmagn').value;
+   			var sinalpa2 = Math.sin(document.querySelector('#sinalpalor').value * Math.PI / 180);
+   			document.getElementById('get7').innerHTML= iduction2*qu*speedmagn*sinalpa2+"H";
+   			document.getElementById('get72').innerHTML= (iduction2*qu*speedmagn*sinalpa2)*1000+"мH";
+   			document.getElementById('get72').innerHTML= (iduction2*qu*speedmagn*sinalpa2)*1000000+"мкH";
+   			document.getElementById('get73').innerHTML= (iduction2*qu*speedmagn*sinalpa2)*1000000000+"нH";
+			};
+			//................................................
+			
+	</script>
+</body>
+</html>
